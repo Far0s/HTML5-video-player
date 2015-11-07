@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dev - Video Player</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HTML5 Video Player by Sébastien Dancer-Michel -->
+
+  <!-- video player container -->
+  <div class="player">
+    <video 
+    src="ressources/video.mp4"
+    width="600"
+    ></video>
+    <!-- player controls container -->
+    <div class="controls-container">
+      <!-- video timeline -->
+      <div class="timeline">
+        <div class="timeline-elapsed"></div>
+      </div>
+      <!-- END video timeline -->
+      <!-- video controls -->
+      <div class="controls-bar">
+        <!-- <a class="btn-playpause btn">play</a> -->
+        <a class="btn-playpause btn paused" href="#">
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="triangle-1"></div>
+          <div class="triangle-2"></div>
+        </a>
+        <a class="btn-volume btn">volume</a>
+        <!-- <div class="volume-slider">
+          <div class="volume-bar">
+            <div class="volume-actual"></div>
+          </div>
+        </div> -->
+        <!-- <a class="btn-quality">720p</a>
+        <div class="quality-select">
+          <input type="radio" name="volume" value="1080p">
+          <input type="radio" name="volume" value="720p">
+          <input type="radio" name="volume" value="480p">
+          <input type="radio" name="volume" value="360p">
+          <input type="radio" name="volume" value="240p">
+        </div> -->
+        <!-- <a class="btn-info">Info</a>
+        <div class="btn-cinema">cinema</div> -->
+        <div class="btn-fullscreen btn">fullscreen</div>
+      </div>
+      <!-- END video controls -->
+    </div>
+    <!-- END player controls container -->
+  </div>
+  <!-- END video player container -->
+  
+  <script src="script.js"></script>
+</body>
+</html>
