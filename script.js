@@ -10,6 +10,8 @@ player.btn_playpause = player.container.querySelector('.btn-playpause');
 player.btn_volume = player.container.querySelector('.btn-volume');
 player.volume_slider = player.container.querySelector('.volume-slider');
 player.volume_level = player.container.querySelector('.volume-level');
+player.duration_elapsed = player.container.querySelector('.duration-elapsed');
+player.duration_total = player.container.querySelector('.duration-total');
 player.btn_fullscreen = player.container.querySelector('.btn-fullscreen');
 
 
@@ -17,6 +19,7 @@ player.btn_fullscreen = player.container.querySelector('.btn-fullscreen');
 window.setInterval(function(){
   var ratio = player.video.currentTime / player.video.duration;
   player.timeline_elapsed.style.transform = 'scaleX('+ ratio +')';
+  player.duration_elapsed.text = player.video.currentTime;
 }, 100);
 
 player.timeline.addEventListener('click', function(e){
@@ -97,6 +100,32 @@ player.btn_volume.addEventListener('click', function(){
 player.volume_slider.addEventListener('click', function(e){
   setVolume(e);
 });
+
+
+// DURATION INDEX
+player.video.addEventListener('loadedmetadata', function(){
+  var duration = player.video.duration,
+      duration_mins = Math.floor(duration / 60),
+      duration_secs = Math.floor(duration - duration_mins * 60);
+  player.duration_total.innerHTML = duration_mins + ":" + duration_secs;
+
+  player.video.ontimeupdate = function() {
+    var currentTime = player.video.currentTime,
+        currentMins = Math.floor(currentTime / 60),
+        currentSecs = Math.floor(currentTime - currentMins * 60),
+        percent = (currentTime / duration) * 100;
+    if (currentSecs < 10) {
+      currentSecs = "0" + currentSecs;
+    }
+    if (currentMins < 10) {
+      currentMins = "0" + currentMins;
+    }
+    player.duration_elapsed.innerHTML = currentMins + ":" + currentSecs;
+    }
+})
+
+
+
 
 
 // KEYBOARD EVENTS

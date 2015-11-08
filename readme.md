@@ -17,9 +17,12 @@ discreet animations.
 - Keyboard shortcuts: spacebar (play/pause), up/down (volume, still buggy), left/right (rewinf/forward), f (fullscreen), m (mute), 1-9 (time % shortcuts)
 
 ---
-Roadmap :
+Roadmap and issues :
 - Have custom controls on fullscreen, instead of default browser controls
 - Tune the timeline to have a cursor and some "wave" animation going on
+- Add a quality selector (I had a nice idea for it, didn't had the time)
+- Add a subtitles selector, with .srt files reading
+- Add a "hint" button (with overlay bubbles hinting at keyboard shortcuts)
 
 
 ### Inspiration :

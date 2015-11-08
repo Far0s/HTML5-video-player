@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dev - Video Player</title>
+  <title>HTML5 Video Player</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- HTML5 Video Player by Sébastien Dancer-Michel -->
+  <!-- HTML5 Video Player - Sébastien Dancer-Michel -->
+  <h1>HTML5 Video Player</h1>
+  <h2>- Sébastien Dancer-Michel (H2P2019) -</h2>
 
   <!-- video player container -->
   <div class="player">
@@ -25,7 +27,6 @@
       <!-- END video timeline -->
       <!-- video controls -->
       <div class="controls-bar">
-        <!-- <a class="btn-playpause btn">play</a> -->
         <a href="#" class="btn btn-playpause paused">
           <div class="left"></div>
           <div class="right"></div>
@@ -36,23 +37,25 @@
         <div class="btn volume-slider">
           <div class="volume-level"></div>
         </div>
-        <!-- <a class="btn-quality">720p</a>
-        <div class="quality-select">
-          <input type="radio" name="volume" value="1080p">
-          <input type="radio" name="volume" value="720p">
-          <input type="radio" name="volume" value="480p">
-          <input type="radio" name="volume" value="360p">
-          <input type="radio" name="volume" value="240p">
-        </div> -->
-        <!-- <a class="btn-info">Info</a>
-        <div class="btn-cinema">cinema</div> -->
-        <div class="btn btn-fullscreen">fullscreen</div>
+        <span class="duration">
+          <span class="duration-elapsed">00:00</span> / <span class="duration-total">00:00</span>
+        </span>
+        <div class="btn btn-fullscreen"></div>
       </div>
       <!-- END video controls -->
     </div>
     <!-- END player controls container -->
   </div>
   <!-- END video player container -->
+
+  <div class="notes">
+    <h3>Hints</h3>
+    <p>• Hit spacebar to play/pause</p>
+    <p>• The controls bar stays on when the video is paused</p>
+    <p>• F will put the video player fullscreen</p>
+    <p>• M will mute/unmute the volume</p>
+    <p>• Try to hit 1 to 9 on your keyboard !</p>
+  </div>
   
   <script src="script.js"></script>
 </body>
