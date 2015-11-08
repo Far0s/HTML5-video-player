@@ -14,6 +14,7 @@ discreet animations.
 - Volume button: clicking mutes/unmutes the video
 - Volume slider: more precise control over volume.
 - Fullscreen button: Sets the player fullscreen, can't do a more obvious description
+
 ---
 Roadmap :
 - Have custom controls on fullscreen, instead of default browser controls
