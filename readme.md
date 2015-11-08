@@ -13,13 +13,13 @@ discreet animations.
 - Play/pause button + clicking anywhere on the video triggers the same function as clicking on the button
 - Volume button: clicking mutes/unmutes the video
 - Volume slider: more precise control over volume.
-- Fullscreen button: Sets the player fullscreen, can't do a more obvious description
+- Fullscreen button: Sets the player fullscreen (player still buggy)
+- Keyboard shortcuts: spacebar (play/pause), up/down (volume, still buggy), left/right (rewinf/forward), f (fullscreen), m (mute), 1-9 (time % shortcuts)
 
 ---
 Roadmap :
 - Have custom controls on fullscreen, instead of default browser controls
 - Tune the timeline to have a cursor and some "wave" animation going on
-- Keyboard shortcuts : spacebar for play/pause, f for fs, 1-9 for fast-forward shortcuts, etc.
 
 
 ### Inspiration :
