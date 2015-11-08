@@ -6,7 +6,7 @@ body {
 
 .player {
   width: 600px;
-  height: 252px;
+  height: 257px;
   position: absolute;
   top: calc(50% - 126px);
   left: calc(50% - 300px);
@@ -17,8 +17,8 @@ body {
 .player .controls-container {
   position: absolute;
   -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
   transition: 0.3s ease-out;
   width: 100%;
   height: 40px;
@@ -26,17 +26,19 @@ body {
   opacity: 0;
   color: #fefefe;
 }
-.player:hover .controls-container {
+.player:hover .controls-container, 
+.player.paused .controls-container {
   -webkit-transform: translateY(-40px);
-      -ms-transform: translateY(-40px);
-          transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  transform: translateY(-40px);
   opacity: 1;
 }
 
 .player .timeline {
   width: 100%;
   height: 6px;
-  background: rgba(255, 0, 0, 0.3);
+  margin-top: -6px;
+  background: rgba(50, 145, 218, 0.4);
   box-sizing: border-box;
   box-shadow: 0 2px 4px 0 #1c1c1c;
   overflow: hidden;
@@ -45,25 +47,27 @@ body {
 
 .player .timeline .timeline-elapsed {
   position: absolute;
-  top: 0px;
   width: 100%;
   height: 6px;
-  background: rgba(255, 0, 0, 0.8);
+  background: #3291DA;
   -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
-          transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
   -webkit-transform-origin: 0;
-      -ms-transform-origin: 0;
-          transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
   transition: -webkit-transform 0.1s, height 0.2s ease-out, margin-top 0.2s ease-out;
   transition: transform 0.1s, height 0.2s ease-out, margin-top 0.2s ease-out;
 }
 
-.player .timeline:hover, .player .timeline:hover .timeline-elapsed {
-  margin-top: -4px;
-  height: 10px;
+.player .timeline:hover {
+  margin-top: -10px;
 }
 
+.player .timeline:hover, 
+.player .timeline:hover .timeline-elapsed {
+  height: 10px;
+}
 
 
 .controls-bar {
@@ -75,7 +79,7 @@ body {
 .btn {
   display: inline;
   height: 100%;
-  margin: auto 10px;
+  margin: auto 6px;
 }
 
 .btn-playpause {
@@ -96,13 +100,13 @@ body {
 }
 .btn-playpause .triangle-1 {
   -webkit-transform: translate(0, -100%);
-      -ms-transform: translate(0, -100%);
-          transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
 }
 .btn-playpause .triangle-2 {
   -webkit-transform: translate(0, 100%);
-      -ms-transform: translate(0, 100%);
-          transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  transform: translate(0, 100%);
 }
 .btn-playpause .triangle-1,
 .btn-playpause .triangle-2 {
@@ -133,17 +137,50 @@ body {
 }
 .btn-playpause.paused .triangle-1 {
   -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 .btn-playpause.paused .triangle-2 {
   -webkit-transform: translate(0, 50%);
-      -ms-transform: translate(0, 50%);
-          transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+  transform: translate(0, 50%);
 }
 
+.btn-volume {
+  display: inline-block;
+  width: 26px;
+  height: 22px;
+  background: url('ressources/btn-volume.svg') 100% no-repeat;
+}
+.btn-volume.mute {
+  background: url('ressources/btn-volume-mute.svg') 100% no-repeat;
+}
 
+.volume-slider {
+  width: 60px;
+  height: 15px;
+  display: inline-block;
+  background: rgba(50, 145, 218, 0.4);
+  position: relative;
+  top: -6px;
+}
 
+.volume-slider .volume-level {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #3291DA;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  transition: -webkit-transform 0.1s, height 0.2s ease-out, margin-top 0.2s ease-out;
+  transition: transform 0.1s, height 0.2s ease-out, margin-top 0.2s ease-out;
+}
 
 
 
