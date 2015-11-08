@@ -5,40 +5,40 @@ body {
 }
 
 .player {
-  width: 600px;
-  height: 257px;
   position: absolute;
   top: calc(50% - 126px);
   left: calc(50% - 300px);
+  width: 600px;
+  height: 257px;
   box-shadow: 0 2px 4px 0 #1c1c1c;
   overflow: hidden;
 }
 
 .player .controls-container {
   position: absolute;
+  width: 100%;
+  height: 40px;
+  color: #fefefe;
+  background: rgba(28, 28, 28, 0.7);
+  opacity: 0;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
   transition: 0.3s ease-out;
-  width: 100%;
-  height: 40px;
-  background: rgba(28, 28, 28, 0.7);
-  opacity: 0;
-  color: #fefefe;
 }
 .player:hover .controls-container, 
 .player.paused .controls-container {
+  opacity: 1;
   -webkit-transform: translateY(-40px);
   -ms-transform: translateY(-40px);
   transform: translateY(-40px);
-  opacity: 1;
 }
 
 .player .timeline {
   width: 100%;
   height: 6px;
-  margin-top: -6px;
   background: rgba(50, 145, 218, 0.4);
+  margin-top: -6px;
   box-sizing: border-box;
   box-shadow: 0 2px 4px 0 #1c1c1c;
   overflow: hidden;
@@ -82,20 +82,20 @@ body {
 }
 
 .btn-playpause {
-  height: 18px;
-  width: 18px;
-  overflow: hidden;
   position: relative;
   top: 9px;
+  height: 18px;
+  width: 18px;
   margin-left: 16px;
+  overflow: hidden;
 }
 .btn-playpause .left {
-  height: 100%;
   float: left;
-  background-color: #fff;
+  height: 100%;
   width: 36%;
-  transition: all 0.25s ease;
+  background-color: #fff;
   overflow: hidden;
+  transition: all 0.25s ease;
 }
 .btn-playpause .triangle-1 {
   -webkit-transform: translate(0, -100%);
@@ -112,9 +112,9 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: transparent;
   width: 0;
   height: 0;
+  background-color: transparent;
   border-right: 18px solid rgb(28, 28, 28);
   border-top: 9px solid transparent;
   border-bottom: 9px solid transparent;
@@ -122,8 +122,8 @@ body {
   transition: transform 0.25s ease;
 }
 .btn-playpause .right {
-  height: 100%;
   float: right;
+  height: 100%;
   width: 36%;
   background-color: #fff;
   transition: all 0.25s ease;
@@ -147,23 +147,23 @@ body {
 
 .btn-volume {
   display: inline-block;
+  position: relative;
+  top: 11px;
   width: 26px;
   height: 20px;
   background: url('ressources/btn-volume.svg') 100% no-repeat;
-  position: relative;
-  top: 11px;
 }
 .btn-volume.mute {
   background: url('ressources/btn-volume-mute.svg') 100% no-repeat;
 }
 
 .volume-slider {
-  width: 60px;
-  height: 16px;
   display: inline-block;
-  background: rgba(50, 145, 218, 0.4);
   position: relative;
   top: 7px;
+  width: 60px;
+  height: 16px;
+  background: rgba(50, 145, 218, 0.4);
 }
 
 .volume-slider .volume-level {
@@ -171,8 +171,8 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background: #3291DA;
+  overflow: hidden;
   -webkit-transform: scaleX(0);
   -ms-transform: scaleX(0);
   transform: scaleX(0);
@@ -189,13 +189,13 @@ body {
 }
 
 .btn-fullscreen {
-  background: url('ressources/fullscreen.svg') center no-repeat;
-  background-size: cover;
-  height: 24px;
-  width: 24px;
   float: right;
   position: relative;
   top: 7px;
+  height: 24px;
+  width: 24px;
+  background: url('ressources/fullscreen.svg') center no-repeat;
+  background-size: cover;
   cursor: pointer;
 }
 
@@ -205,6 +205,12 @@ h1, h2, .notes {
   text-align: center;
 }
 
-.notes {
+h1 {
+  margin-top: 5%;
+}
 
+.notes {
+  position: absolute;
+  left: calc(50% - 158px);
+  top: calc(50% + 130px);
 }

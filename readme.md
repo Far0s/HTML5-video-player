@@ -18,6 +18,7 @@ discreet animations.
 
 ---
 Roadmap and issues :
+- Build a proper presentation page
 - Have custom controls on fullscreen, instead of default browser controls
 - Tune the timeline to have a cursor and some "wave" animation going on
 - Add a quality selector (I had a nice idea for it, didn't had the time)

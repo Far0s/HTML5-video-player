@@ -1,7 +1,6 @@
 // SETUP
 
 var player = {};
-
 player.container = document.querySelector('.player');
 player.video = player.container.querySelector('video');
 player.timeline = player.container.querySelector('.timeline');
@@ -29,6 +28,7 @@ player.timeline.addEventListener('click', function(e){
   time = ratio * player.video.duration;  
   player.video.currentTime = time;
 });
+
 
 // PLAY PAUSE
 player.container.classList.add('paused');
@@ -72,9 +72,9 @@ player.video.addEventListener('dblclick', function(){
 });
 
 
-
 // VOLUME 
 player.volume_level.style.transform = 'scaleX('+ 1 +')'; // sets the volume slider at 1
+
 function setVolume(e){
   var bounding_rect = player.volume_slider.getBoundingClientRect(),
   x = e.clientX - bounding_rect.left,
@@ -84,7 +84,7 @@ function setVolume(e){
 }
 
 function volumeSwitch() {
-  if (player.video.muted == false) {
+  if (player.video.muted === false) {
     player.video.muted = true;
     player.btn_volume.classList.add('mute');
   } else {
@@ -111,9 +111,9 @@ player.video.addEventListener('loadedmetadata', function(){
 
   player.video.ontimeupdate = function() {
     var currentTime = player.video.currentTime,
-        currentMins = Math.floor(currentTime / 60),
-        currentSecs = Math.floor(currentTime - currentMins * 60),
-        percent = (currentTime / duration) * 100;
+    currentMins = Math.floor(currentTime / 60),
+    currentSecs = Math.floor(currentTime - currentMins * 60),
+    percent = (currentTime / duration) * 100;
     if (currentSecs < 10) {
       currentSecs = "0" + currentSecs;
     }
@@ -121,8 +121,8 @@ player.video.addEventListener('loadedmetadata', function(){
       currentMins = "0" + currentMins;
     }
     player.duration_elapsed.innerHTML = currentMins + ":" + currentSecs;
-    }
-})
+  };
+});
 
 
 
@@ -141,10 +141,10 @@ function checkKey(e) {
     player.video.volume = player.video.volume - 0.1;
     console.log(player.video.volume);
   } else if (e.keyCode == '37') { // L arrow - 5secs rewind
-    player.video.currentTime = player.video.currentTime - 5
+    player.video.currentTime = player.video.currentTime - 5;
     console.log('left');
   } else if (e.keyCode == '39') { // R arrow - 5secs forward
-    player.video.currentTime = player.video.currentTime + 5
+    player.video.currentTime = player.video.currentTime + 5;
     console.log('right');
   } else if (e.keyCode == '70') { // F - Fullscreen
     goFS();
